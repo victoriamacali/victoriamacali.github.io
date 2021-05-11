@@ -3,62 +3,36 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Victoria Macali</title>
-<link rel="icon" type="image/x-icon" href="assets/images/favicon-intials.png" />
+<link rel="icon" type="image/x-icon" href="img/favicon-vm.png" />
 <!-- Font Awesome icons (free version)-->
 <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js"></script>
 
-.sidenav {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #c2526c;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #fff;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.main {
-  margin-left: 250px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<!-- Side Scroll Bar -->
 <body>
-
+    <div class="header">
+        <h2>Scroll Indicator</h2>
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>
+      </div>
+<!-- Side Nav Bar -->
 <div class="sidenav">
+    <img width="300px" height="300px"src="img/me.png" style="position:relative;top:-10px"> 
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
   <a href="#education">Education</a>
   <a href="#skills">Skills</a>
   <a href="#interests">Interests</a>
   <a href="#awards">Awards</a>
-</div>
 
+</div>
+<!-- About Section -->
 <div class="main">
     <div id="about">
         <section>
@@ -69,12 +43,13 @@ body {
             <div class="subheading mb-5">
                 Los Angeles · California
             </div>
-            <p class="lead mb-5">I am first generation college student finding her way in the world of tech.</p>
+            <p>I am first generation college student finding her way in the world of tech.</p>
             <div class="social-icons">                            
                 <a class="social-icon" href="https://www.linkedin.com/in/victoria-macali/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                 <a class="social-icon" href="https://github.com/victoriamacali" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 <a class="social-icon" href="mailto:victoriatmacali@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a class="social-icon" href="assets/files/victoriamacali-resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file"></i></a>                        
+                <a class="social-icon" href="files/victoriamacali-resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file"></i></a>   
+                <hr class="solid">                     
             </div>
         </section>
 
@@ -126,10 +101,11 @@ body {
                         <section>
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">April 2021</span></div>
+                <hr class="solid">      
             </div>
         </section>
 
-                    <!-- Education -->
+        <!-- Education -->
         <section>
             <h2>Education</h2>
             <div id="education">
@@ -149,7 +125,8 @@ body {
                     <p>GPA: 4.26</p>
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">August 2015 - May 2019</span></div>
-    
+                <hr class="solid">      
+            <!-- Skills -->
                 <div id="skills">
                     <h2 class="mb-5">Skills</h2>
                     <div class="subheading mb-3">Programming Languages & Tools</div>
@@ -161,26 +138,23 @@ body {
                         <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
                         <li class="list-inline-item"><i class="fab fa-sass"></i></li>
                     </ul>
-                    <div class="subheading mb-3">Workflow</div>
+                    <div class="subheading mb-3">Work Ethic</div>
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
+                            Full Time Student
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
+                            Open to learning new things
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
+                            Passionate about programming
                         </li>
                     </ul>
                 </div>
+                <hr class="solid">      
         </section>
 
             <!-- Interests-->
@@ -189,6 +163,7 @@ body {
                         <h2 class="mb-5">Interests</h2>
                         <p>Aside from being a fulltime student, fashion, design and creative crafts fill up my free time. I also run a small jewelry business to provide an affordable way for students to accessorize.</p>
                         <p class="mb-0">When I'm not daydreaming about code, I love to spend my time at the beach taking in what nature has to offer.</p>
+                        <hr class="solid">      
                     </section>
                 </div>
 
