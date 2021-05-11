@@ -2,6 +2,11 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Victoria Macali</title>
+<link rel="icon" type="image/x-icon" href="assets/images/favicon-intials.png" />
+<!-- Font Awesome icons (free version)-->
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -9,12 +14,12 @@ body {
 
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 250px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #c2526c;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -23,7 +28,7 @@ body {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #fff;
   display: block;
 }
 
@@ -32,13 +37,13 @@ body {
 }
 
 .main {
-  margin-left: 160px; /* Same as the width of the sidenav */
+  margin-left: 250px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 40px;}
+  .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
 </style>
@@ -47,19 +52,159 @@ body {
 
 <div class="sidenav">
   <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#interests">Interests</a>
+  <a href="#awards">Awards</a>
 </div>
 
 <div class="main">
-  <h2>Sidebar</h2>
-  <p>This sidebar is of full height (100%) and always shown.</p>
-  <p>Scroll down the page to see the result.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    <div id="about">
+        <h1 class="mb-0">
+            Victoria 
+            <span class="text-primary">Macali</span>
+        </h1>
+        <div class="subheading mb-5">
+            Los Angeles · California
+        </div>
+        <p class="lead mb-5">I am first generation college student finding her way in the world of tech.</p>
+        <div class="social-icons">                            
+            <a class="social-icon" href="https://www.linkedin.com/in/victoria-macali/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon" href="https://github.com/victoriamacali" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a class="social-icon" href="mailto:victoriatmacali@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a class="social-icon" href="assets/files/victoriamacali-resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file"></i></a>                        
+        </div>
+    </div id="projects">
+
+    <!-- Projects-->
+            <h2 class="mb-5">Projects</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Air Quality Index Calculator</h3>
+                    <div class="subheading mb-3">Python Program</div>
+                    <p>Determines the Air Quality of different locations based on three
+                        major chemical pollutants. Utilized for loops and multiple if and else statements 
+                        to produce each particular calculation this enabled the user to look up different 
+                        locations in one single use of the program.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">September 2019</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Binary Search Tree</h3>
+                    <div class="subheading mb-3">Python Program</div>
+                    <p> Implemented a Binary Search Tree Data Structure using inorder
+                        traversal to set the order of numbers in the tree. Correctly applied the traversal
+                        method when prompted to remove the root node and leaves by user.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">November 2020</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Battleship Game</h3>
+                    <div class="subheading mb-3">Java Program</div>
+                    <p> Simulates a Battleship inspired game. A 5x5 2D array is
+                        created to randomly assign the ship’s location for each gameplay. Effectively
+                        loops until the user hits the entire target or until the user loses the game.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">February 2021</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">Student Study Clock</h3>
+                    <div class="subheading mb-3">HTML, CSS, Sass Website</div>
+                    <p> Executed both frontend and backend languages as a solo hacker to design a 
+                        motivational website to increase study productivity. Promoted the Pomodoro Study Technique 
+                        and matched with soothing code-fi music to create a safe and productive enviornment.</p>
+                        <p><a href="https://web.csulb.edu/~026340182/studyclock/" target="_blank" rel="noopener noreferrer">Visit my study space here!</a></p>
+                        <section>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">April 2021</span></div>
+            </div>
+                    <!-- Education -->
+        <h2>Education</h2>
+        <div id="education">
+            <div class="flex-grow-1">
+                <h3 class="mb-0">California State University, Long Beach</h3>
+                <div class="subheading mb-3">Bachelor of Science</div>
+                <div>Computer Science - Cyber Security Minor</div>
+                <p>GPA: 3.32</p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">August 2019 - December 2023</span></div>
+        </div>
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1">
+                <h3 class="mb-0">St.Paul High School</h3>
+                <div class="subheading mb-3">Scholar Athlete
+                </div>
+                <p>GPA: 4.26</p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">August 2015 - May 2019</span></div>
+
+            <div id="skills">
+                <h2 class="mb-5">Skills</h2>
+                <div class="subheading mb-3">Programming Languages & Tools</div>
+                <ul class="list-inline dev-icons">
+                    <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-java"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                </ul>
+                <div class="subheading mb-3">Workflow</div>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        Mobile-First, Responsive Design
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        Cross Browser Testing & Debugging
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        Cross Functional Teams
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check"></i></span>
+                        Agile Development & Scrum
+                    </li>
+                </ul>
+            </div>
+            <!-- Interests-->
+                <div id="interests">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Aside from being a fulltime student, fashion, design and creative crafts fill up my free time. I also run a small jewelry business to provide an affordable way for students to accessorize.</p>
+                    <p class="mb-0">When I'm not daydreaming about code, I love to spend my time at the beach taking in what nature has to offer.</p>
+                </div>
+
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div id="awards">
+                    <h2 class="mb-5">Awards & Certifications</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            1
+                            <sup>st</sup>
+                            Place - Best BeachHack  - Hackathon 2021
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-award text-warning"></i></span>
+                            Web Programming Foundations - Linked In Certificate
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>  
+        </div>
+
+
+    </div>
+
+
 </div>
    
 </body>
