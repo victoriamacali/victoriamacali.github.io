@@ -1,215 +1,453 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
 <title>Victoria Macali</title>
-<link rel="icon" type="image/x-icon" href="img/favicon-vm.png" />
-<!-- Font Awesome icons (free version)-->
-<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/script.js"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<!-- Side Scroll Bar -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
-    <div class="header">
-        <h2>Scroll Indicator</h2>
-        <div class="progress-container">
-          <div class="progress-bar" id="myBar"></div>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.topnav a {
+  float: left;
+  color: #030000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ef90c4;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #ef90c4;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+
+body, h1,h2,h3,h4 {
+  font-family: Poppins, sans-serif;
+}
+
+/* Style the header */
+header {
+  padding: 20px;
+  text-align: left;
+  font-size: 25px;
+  color: black;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 60%;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 40%;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+}
+
+.active, .collapsible:hover {
+  background-color: #ef90c4;
+  content: "\2212";
+  color:white;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+  color:white;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.scrollabletextbox {
+    height:100px;
+    width:200px;
+    font-size: 82%;
+    overflow:scroll;
+    }
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.centerbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+
+.btn,.button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:black; color:white;cursor:pointer;white-space:nowrap}
+.btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+.btn,button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.disabled,.btn:disabled,.button:disabled{cursor:not-allowed;opacity:0.3}.disabled *,:disabled *{pointer-events:none}
+.btn.disabled:hover,.btn:disabled:hover{box-shadow:none}
+.button:hover{
+  color:white;
+  background-color:#ef90c4
+  }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="#name">Victoria Macali</a>
+  <div class="topnav-right">
+    <a href="#work">Work</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+<header>
+  <h3>Software Developer <br> First Generation New Grad</h3>
+</header>
+
+<section>
+  <nav>
+    <img src="images/vic@desk.png" alt="Victoria sitting at SEC work desk." width="80%" height="65%">
+  </nav>
+  
+  <article>
+    <h1>Current Federal Contractor</h1>
+    <h1>Based in Los Angeles, <br>California, USA</h1>
+</article>
+</section>
+
+
+
+<section id="work">
+  <div style="padding: 20px">
+    <h1><strong>What I do</strong></h1>
+    <div class="row">
+      <div class="column">
+        <!-- Fed Contractor Card-->
+        <div class="card">
+          <h3>Federal Contractor</h3>
+          <img src="images/sec-card-pic.png" alt="SEC Load Screen" style="width:100%">
+          <p>Employed by HACU with a contract with the U.S. Securities and Exchange Commission.</p>
+          <div>
+            <!-- Modal Button -->
+            <button onclick="document.getElementById('id01').style.display='block'" class="button">Learn more</button>
+            <!-- Modeal Section-->
+              <div id="id01" class="w3-modal">
+                <div class="w3-modal-content w3-animate-zoom w3-card-4" style="width: 1450px;">
+                  <header class="w3-container" style="background-color: #ef90c4; color: #ffffff;"> 
+                    <span onclick="document.getElementById('id01').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <h2>Federal Contractor</h2>
+                  </header>
+                  <div class="w3-container">
+                    <p>	
+                      &#8226;  Collaborated with a team of software developers to design, develop, and implement web-based applications and tools to support the SEC's regulatory cybersecurity initiatives. <br>
+                      &#8226;  Worked closely with stakeholders, including regulatory analysts and attorneys, to gather requirements and ensure software solutions aligned with their needs. <br>
+                      &#8226;  Actively participated in team meetings, providing insights and suggestions to improve software development workflows and project management. 
+                      <p><br></p>
+                      Tech Stack:  HTML, CSS, JavaScript, JSON, Highcharts, Pandas, Numpy</p>
+                  </div>
+                  <footer class="w3-container" style="background-color: #ef90c4; color: #ffffff;">
+                    <p>Washington, D.C. | September 2022 - Present </p>
+                  </footer>
+                </div>
+              </div>
+          </div>
+
         </div>
       </div>
-<!-- Side Nav Bar -->
-<div class="sidenav">
-    <img width="280px" height="280px"src="img/updatedpfp.PNG" style="position:relative;top:-10px"> 
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#education">Education</a>
-  <a href="#skills">Skills</a>
-  <a href="#interests">Interests</a>
-  <a href="#awards">Awards</a>
-
-</div>
-<!-- About Section -->
-<div class="main">
-    <div id="about">
-        <section>
-            <h1 class="mb-0">
-                VICTORIA 
-                <span class="text-primary">MACALI</span>
-            </h1>
-            <div class="subheading mb-5">
-                <h5>Los Angeles · California</h5>
-            </div>
-            <p>I am first generation college student finding her way in the world of tech.&#128105;&#127997;&#8205;&#128187;</p>
-            <div class="social-icons">                            
-                <a class="social-icon" href="https://www.linkedin.com/in/victoria-macali/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                <a class="social-icon" href="https://github.com/victoriamacali" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                <a class="social-icon" href="mailto:victoriatmacali@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a class="social-icon" href="https://drive.google.com/file/d/1tR2OGQ91oSBMtkoEaLFhWdl_b30DIpZC/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i class="fas fa-file"></i></a>   
-                <hr class="solid">                     
-            </div> 
-        </section>
-
-
-
-    <!-- Projects-->
-    </div id="projects">
-        <section class="resume-section" id="projects">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Projects</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Air Quality Index Calculator</h3>
-                        <div class="subheading mb-3">Python Program</div>
-                        <p>Determines the Air Quality of different locations based on three
-                            major chemical pollutants. Utilized for loops and multiple if and else statements 
-                            to produce each particular calculation this enabled the user to look up different 
-                            locations in one single use of the program.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2019</span></div>
+    
+      <div class="column">
+        <div class="card">
+          <h3>Software Engineer</h3>
+              <img src="images/soft-dev-card-pic.png" alt="SEC Load Screen" style="width:100%">
+          <p>Software Dev Intern at the SEC. Four years experience of undergrad software projects.</p>
+          <div>
+            <!-- Modal Button -->
+            <button onclick="document.getElementById('id02').style.display='block'" class="button">Learn more</button>
+            <!-- Modeal Section-->
+              <div id="id02" class="w3-modal">
+                <div class="w3-modal-content w3-animate-zoom w3-card-4" style="width: 1450px;">
+                  <header class="w3-container" style="background-color: #ef90c4; color: #ffffff;"> 
+                    <span onclick="document.getElementById('id02').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <h2>Software Engineer</h2>
+                  </header>
+                  <div class="w3-container">
+                    <p>Interned under the Division of Economic Risk Analysis and worked in the Office of Corporate Finance. During my 8 months in that office <br>
+                    I worked onbuilding a HTML Dashboard which represented two decades worth of informative Cybersecurity data. </p>
+                    <p>Since May 2023 I was fortunate to move into the Office of Data Science, where I have been working with Natural Language Processing Techniques <br>
+                    and working with the AWS Suite. I have launched a labeling job using AWS Sagemaker to help rate the accuracy of my scripts.</p>
+                  </div>
+                  <footer class="w3-container" style="background-color: #ef90c4; color: #ffffff;">
+                    <p>Modal Footer</p>
+                  </footer>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Binary Search Tree</h3>
-                        <div class="subheading mb-3">Python Program</div>
-                        <p> Implemented a Binary Search Tree Data Structure using inorder
-                            traversal to set the order of numbers in the tree. Correctly applied the traversal
-                            method when prompted to remove the root node and leaves by user.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">November 2020</span></div>
+              </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+          <h3>UI/UX Designer</h3>
+          <img src="images/musashi-card-pic.png" alt="SEC Load Screen" style="width:100%">
+          <p>Lead UI/UX Designer for Cybersecurity Tool Desktop based app.</p>
+          <div>
+            <!-- Modal Button -->
+            <button onclick="document.getElementById('id03').style.display='block'" class="button">Learn more</button>
+            <!-- Modeal Section-->
+              <div id="id03" class="w3-modal">
+                <div class="w3-modal-content w3-animate-zoom w3-card-4" style="width: 1450px;">
+                  <header class="w3-container" style="background-color: #ef90c4; color: #ffffff;"> 
+                    <span onclick="document.getElementById('id03').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <h2>UI/UX Designer</h2>
+                  </header>
+                  <div class="w3-container">
+                    <p>&#8226;  Led a team of front-end developers and UI/UI designers in the development of a desktop application, ensuring high-quality user interface <br> and user experience with a Cybersecurity Multi-Tool.</p> 
+                    <p> &#8226;   Oversaw the design and implementation of the application's front-end architecture, including the selection of appropriate frameworks, libraries, and technologies.</p> 
+                    <p>&#8226;   Collaborated with back-end developers and other cross-functional teams to ensure seamless integration of front-end components with the application's backend.</p> <br>
+                    <p>Tech Stack: Electron, HTML, CSS, JavaScript, JSON</p>
+                  </div>
+                  <footer class="w3-container" style="background-color: #ef90c4; color: #ffffff;">
+                    <p>Long Beach, CA | August 2022 - May 2023</p>
+                  </footer>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Battleship Game</h3>
-                        <div class="subheading mb-3">Java Program</div>
-                        <p> Simulates a Battleship inspired game. A 5x5 2D array is
-                            created to randomly assign the ship’s location for each gameplay. Effectively
-                            loops until the user hits the entire target or until the user loses the game.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">February 2021</span></div>
+              </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+          <h3>Mentor & Tutor</h3>
+          <img src="images/mentor-card-pic.png" alt="SEC Load Screen" style="width:100%">
+          <p>Served as a Peer Mentor and Tutor to the College of Engineering at CSULB.</p>
+          <div>
+            <!-- Modal Button -->
+            <button onclick="document.getElementById('id04').style.display='block'" class="button">Learn more</button>
+            <!-- Modeal Section-->
+              <div id="id04" class="w3-modal">
+                <div class="w3-modal-content w3-animate-zoom w3-card-4" style="width: 1450px;">
+                  <header class="w3-container" style="background-color: #ef90c4; color: #ffffff;"> 
+                    <span onclick="document.getElementById('id04').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <h2>Mentor & Tutor</h2>
+                  </header>
+                  <div class="w3-container">
+                    <p>&#8226; Provided guidance, support, and mentorship to first-generation students, helping them navigate the challenges and transitions of college life. Served over 20+ freshmen students.</p>
+                    <p>&#8226; Conducted one-on-one tutoring sessions to assist students in understanding complex computer science concepts, algorithms, and programming languages.</p>
+                    <p>&#8226; Acted as a liaison between students and faculty, addressing concerns, resolving conflicts, and facilitating communication. </p>
+                  </div>
+                  <footer class="w3-container" style="background-color: #ef90c4; color: #ffffff;">
+                    <p>Long Beach, CA | August 2021 - May 2023</p>
+                  </footer>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Student Study Clock</h3>
-                        <div class="subheading mb-3">HTML, CSS, Sass Website</div>
-                        <p> Executed both frontend and backend languages as a solo hacker to design a 
-                            motivational website to increase study productivity. Promoted the Pomodoro Study Technique 
-                            and matched with soothing code-fi music to create a safe and productive enviornment.</p>
-                            <p><a href="https://home.csulb.edu/~026340182/htdocs/studyclock/" target="_blank" rel="noopener noreferrer">Visit my study space here!</a></p>
-                            <section>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">April 2021</span></div>
+              </div>
+          </div>
+        </div>
+      </div>
 
-            </div>
-  
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section>
-            <hr class="solid">     
-            <h2>Education</h2>
-            <div id="education">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0">California State University, Long Beach</h3>
-                    <div class="subheading mb-3">Bachelor of Science</div>
-                    <div>Computer Science - Cyber Security Minor</div>
-                    <p>GPA: 3.35</p>
-                </div>
-                <div class="flex-shrink-0"><span class="text-primary">August 2019 - December 2023</span></div>
-            </div>
-            <div class="d-flex flex-column flex-md-row justify-content-between">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0">St.Paul High School</h3>
-                    <div class="subheading mb-3">Scholar Athlete
-                    </div>
-                    <p>GPA: 4.26</p>
-                </div>
-                <div class="flex-shrink-0"><span class="text-primary">August 2015 - May 2019</span></div>
-            </section>
-            <!-- Skills -->
-            <hr class="solid">     
-                <div id="skills">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-java"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                    </ul>
-                    <div class="subheading mb-3">Work Ethic</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Full Time Student
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Open to learning new things
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Passionate about programming
-                        </li>
-                    </ul>
-                </div>  
-
-
-            <!-- Interests-->
-            <hr class="solid">    
-                <div id="interests">
-                    <section>
-                        <h2 class="mb-5">Interests</h2>
-                        <p>Aside from being a fulltime student, fashion, design and creative crafts fill up my free time. I also run a small jewelry business to provide an affordable way for students to accessorize.</p>
-                        <p class="mb-0">When I'm not daydreaming about code, I love to spend my time at the beach taking in what nature has to offer.</p>
-                        <hr class="solid">      
-                    </section>
-                </div>
-
-            <!-- Awards-->
-
-                <div id="awards">
-                    <section>
-                        <h2 class="mb-5">Awards & Certifications</h2>
-                        <ul class="fa-ul mb-0 ">
-                            <li>
-                                <span class="fa-li "><i class="fas fa-trophy text-warning"></i></span>
-                                1
-                                <sup>st</sup>
-                                Place - Best BeachHack  - Hackathon 2021
-                            </li>
-
-                            <li>
-                                <span class="fa-li"><i class="fas fa-award text-warning"></i></span>
-                                Web Programming Foundations - Linked In Certificate
-                            </li>
-
-
-                            <li>
-                                <span class="fa-li"><i class="fas fa-award text-warning"></i></span>
-                                Learning Python - Linked In Certificate
-                            </li>
-
-                            <li>
-                                <span class="fa-li"><i class="fas fa-user-graduate text-warning" color=#ffdf81 ></i></span>
-                                vGHC Student Scholarship - Grace Hopper Convention
-                            </li>
-                         
-                        </ul>
-                    </div>
-                    <h6 class="form-inline label "> © Victoria Macali 2021</h6>
-                    </section>
-                    
-        </div>  
     </div>
+  </div>
+</section>
 
+<section id="portfolio">
+  <div>
+    <h1 style="padding: 20px"><strong>Portfolio</strong></h1>
+    <button class="collapsible">Musashi Desktop App</button>
+    <div class="content">
+      <p>
+        Introducing Musashi - your ultimate cybersecurity desktop app, combining encryption and steganography tools for a fortress-like digital defense. Shield your files with unbreakable encryption algorithms and seamlessly embed secret messages within files. Take control with Musashi protect your digital existence with absolute confidence.</p>
+    </div>
+    <hr width="100%" color="black" size="5px" />
+    <button class="collapsible">Cybersecurity Web App</button>
+    <div class="content">
+      <p>Within 8 months I created a purely HTML, CSS, and Javacript Website which acted as an informative Cybersecurity Report. The cybersecurity web app contained about two decades worth of data, represented using various graphs with the Highcharts.com library. </p>
+    </div>
+    <hr width="100%" />
+    <button class="collapsible">Java Battleship Game</button>
+    <div class="content">
+      <p>A classic recreattion of Battleship  developed in Java, bringing the thrill of naval warfare to your fingertips. Engage in strategic combat as you command your fleet to sink enemy ships on a grid-based battlefield. </p>
+    </div>
+    <hr width="100%" />
+    <button class="collapsible">Android Mobile App</button>
+    <div class="content">
+      <p>A  cupcake ordering mobile app developed in Android Studio, designed to satisfy your sweet cravings with just a few taps. Browse through a mouthwatering selection of cupcakes in various flavors, sizes, and toppings, and customize your order to perfection. With a user-friendly interface to ensure a seamless and delightful cupcake ordering experience, bringing the joy of delicious confections right to your fingertips. </p>
+    </div>
+    <hr width="100%" />
+</section>
+
+<section id="about">
+  <div style="padding: 20px">
+    <h1><strong>About Me</strong></h1>
+    <nav>
+      <h3><strong>Recent Graduate of California State University, Long Beach</strong></h3>
+      <h4> Degree: Bachelor's of Computer Science</h4>
+      <h4> Minor: Cybersecurity Applications</h4>
+      <p><br></p>
+
+      <h3><strong>Awards and Honors</strong></h3>
+      <h4>President's Honor List 2023</h4>
+      <h4> Dean's Honor List 2022</h4>
+      <h4>Grace Hopper Celebration 2021 Scholarship Recipient</h4>
+
+      <p><br></p>
+      <h3><strong>Clubs and Affiliations</strong></h3>
+      <h4>Women in Computing @ CSULB</h4>
+      <h4> &#160; &#160; &#160; &#8605; Webmaster &#40; 2022 - 2023 &#41;</h4>
+      <h4> &#160; &#160; &#160; &#8605; MarinaHacks Website Committee Lead &#40; 2022 - 2023 &#41;</h4>
+      <h4> &#160; &#160; &#160; &#8605; Secretary &#40; 2021 - 2022 &#41;</h4>
+      <h4> &#160; &#160; &#160; &#8605; MarinaHacks Sponsorship Committee Lead &#40; 2021 - 2022 &#41;</h4>
+      <h4> &#160; &#160; &#160; &#8605; Sisterhood Mentor &#40; 2020 - 2021 &#41;</h4>
+
+      <p><br></p>
+      <h4>Association of Computing Machinery @ CSULB</h4>
+      <h4> &#160; &#160; &#160; &#8605; BeachHacks Winner &#40; Best Beach Hack 2020 &#41;</h4>
+      <p><br></p>
+      <h4>Society of Women Engineers @ CSULB</h4>
+      <h4>Society of Hispanic Professional Engineers @ CSULB</h4>
+    </nav>
+      
+      
+      <article>
+        <img src="images/csulbgrad.png" alt="CSULB Graduation Pictures" style="width:100%">
+        <img src="images/lb.png" alt="CSULB Logos" style="width:100%">
+        <p><br></p>
+        <img src="images/clubs.png" alt="CSULB Clubs" style="width:100%">
+
+    </article>
+  </div>
+  </div>
+</section>
+<div class="centerbutton">
+  <a style="font-size: large;" href="file/VictoriaMacali_Resume.pdf" download="MacaliVictoriaResume">Download Resume Here</a> 
 </div>
+<footer id="contact">
+  <p>Conact Me!</p>
+</footer>
 
 </body>
-</html> 
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+  </script>
+</html>
+
